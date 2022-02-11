@@ -6,6 +6,7 @@ name: Backends Chat CI/CD
   pull_request:
     branches:
       - master
+  workflow_dispatch:   
 jobs:
   ci:
     runs-on: ubuntu-latest
