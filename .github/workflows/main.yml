@@ -1,0 +1,19 @@
+name: Backends Chat CI/CD
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    container:
+      image: node
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install & Tests
+        run: |
+          npm install
+          npm test
